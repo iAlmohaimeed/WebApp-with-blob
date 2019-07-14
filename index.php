@@ -20,7 +20,7 @@ switch($request_method){
         break;
 }
 function doGet(){
-    fetchBlob();
+   // fetchBlob();
     echo "Get method";
 }
 function doPost(){
