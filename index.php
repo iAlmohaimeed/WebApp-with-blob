@@ -52,7 +52,7 @@ function fetchBlob(){
         
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());
-    echo "Done.";
+    echo "Done.\n";
 }
 /* This function is responsible for connecting to the blob storage account
    @param:
