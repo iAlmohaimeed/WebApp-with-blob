@@ -55,6 +55,7 @@ function uploadToBlob(){
     $content = fopen($fileToUpload, "r");
 
     //Upload blob
+    $containerName = "test";
     $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
     echo "uploading ... ";
 }
