@@ -1,4 +1,5 @@
 <?php 
+
 // Hold HTTP request type
 $request_method = $_SERVER['REQUEST_METHOD'];
 switch($request_method){
