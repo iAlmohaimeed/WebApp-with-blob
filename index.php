@@ -34,7 +34,11 @@ function doPost(){
 function fetchBlob(){
     echo "Connecting ...\n";    
     // Get a connection instance. 
-    $blobClient = connect();
+    # Setup a specific instance of an Azure::Storage::Client
+    $connectionString = "DefaultEndpointsProtocol=https;AccountName=ibrahim20;AccountKey=wMCFPXsA/klI6OGSrmdc1jgFIAJa3bRyD9mhtH31fS9OLCnlhGL8Er/TSc9uKrMMt1GYinFBkIuC5lP2krt/IA==";
+    // Create blob client.
+    $blobClient = BlobRestProxy::createBlobService($connectionString);
+    
     // Create a new ListBlobOption instance.
     $listBlobsOptions = new ListBlobsOptions();
     // Specify the name of the container.
